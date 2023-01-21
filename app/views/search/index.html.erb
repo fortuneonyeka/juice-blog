@@ -1,0 +1,30 @@
+<h1 class="text-center"><%= pluralize(@articles.count, "Search Result")%></h1> 
+
+
+<div class="container">
+<table class="table table-light text-secondary table-striped">
+<thead>
+<tr>
+<th><%=  "Title" %></th>
+<th><%= "Article content" %></th>
+<th><%= "Users" %></th>
+<th><%= sort_link(@query, :search_numbers, "Number of searches") %></th>
+
+</tr>
+</thead>
+<tbody>
+</tbody>
+<% @articles.each do |article|%>
+<tr>
+  <td><%= link_to article.title, article%></td>
+  <td><%=article.body.truncate_words(15)%></td>
+  <td><%=current_user.email%></td>
+  
+  <td><%= @search_count %>: searches</td>
+
+   
+</tr>
+<% end %>
+</table>
+</div>
+
