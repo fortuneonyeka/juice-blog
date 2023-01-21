@@ -9,11 +9,12 @@
       <%= link_to "Creat New Article",new_article_path, :class => "nav-item nav-link" %>
       
     </div>
-            <%# <div><%= render "search/form_search"%></div>
-         <p class="navbar-text d-flex justify-content-center px-4 float-right mx-4">
+            <div><%= render "search/form_search"%></div>
+      
+            <p class="navbar-text d-flex justify-content-center px-4 float-right mx-4">
         <% if user_signed_in? %>
-          <strong><%= current_user.email %></strong>.
-          <%= link_to "Analytics",search_path, :class => "nav-item nav-link" %>
+          <strong class="px-2"><%= current_user.email %></strong>.
+          <%= link_to "Analytics",search_path, :class => "nav-item nav-link px-2" %>
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
           <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>
@@ -21,6 +22,5 @@
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
         <% end %>
         </p>
-         
   </div>
 </nav>
