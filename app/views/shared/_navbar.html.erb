@@ -13,10 +13,10 @@
       
             <p class="navbar-text d-flex justify-content-center px-4 float-right mx-4">
         <% if user_signed_in? %>
-          <strong class="px-2"><%= current_user.email %></strong>.
-          <%= link_to "Analytics",search_path, :class => "nav-item nav-link px-2" %>
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          |<strong class="px-2"><%= current_user.email %></strong>|
+          <%= link_to "Analytics",search_path, :class => "nav-item nav-link px-3" %>|
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav-link nav-item px-3' %> |
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link nav-item mb-3 mx-3 px-3'  %>
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
