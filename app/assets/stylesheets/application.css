@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ 
+.link:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+.destroy {
+  border-radius: 6px;
+}
+
+.destroy:hover {
+  background-color: red;
+  border-radius: 6px;
+}

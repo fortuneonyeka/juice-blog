@@ -3,10 +3,10 @@ Our blog has <%= @articles.count %> articles and counting!
 
 <ul>
   <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
+    <li class="list-unstyled">
+      <%= link_to article.title, article, :class =>"link text-decoration-none"%>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path, :class =>"text-decoration-none link" %>
