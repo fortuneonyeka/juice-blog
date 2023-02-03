@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  #in order to have the below action work on every controller, i moved it to the application controller
+  # before_action :authenticate_user!, except: [:index]
 
 
   def index
